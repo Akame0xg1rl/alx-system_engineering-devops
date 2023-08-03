@@ -1,4 +1,0 @@
-#!/bin/bash
-for file in [A-Z]*; do
-    mv "$file" /tmp/u/
-done
