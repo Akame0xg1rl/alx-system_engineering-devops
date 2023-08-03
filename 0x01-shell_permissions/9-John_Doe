@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l hello | cut -d ' ' -f 1
+chmod 007 hello
