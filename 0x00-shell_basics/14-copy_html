@@ -1,4 +1,2 @@
 #!/bin/bash
-
-parent_dir=$(dirname "$(pwd)")
-cp -un *.html "$parent_dir"
+cp -un *.html $(dirname "$(pwd)")
