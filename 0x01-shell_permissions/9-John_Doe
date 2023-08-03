@@ -1,2 +1,2 @@
 #!/bin/bash
-ls --format="%A" hello
+ls -l hello | cut -d ' ' -f 1
