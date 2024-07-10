@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# To follw tshellch
+
+
+# The default site configuration symlink to be tkken out
+sudo rm /etc/nginx/sites-enabled/default
+
+# Create a new symlink for the default site configuration
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+# Restart Nginx service
+sudo service nginx restart
