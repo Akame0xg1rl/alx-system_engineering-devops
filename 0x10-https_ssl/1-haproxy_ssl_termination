@@ -54,12 +54,12 @@ frontend www-https
     use_backend letsencrypt-backend if letsencrypt-acl
     default_backend www-backend
 
+frontend clickviral-frontend-https
+        bind *:443 ssl crt /etc/haproxy/certs/akamegakill.tech.pem
+        http-request set-header X-Forwarded-Proto https
+        default_backend akamegakill-backend
 
-backend www-backend
-    balance  roundrobin
-    redirect scheme https if !{ ssl_fc }
-    server 187477-web-01 54.210.52.15 check
-    server 187477-web-02 54.172.81.139 check
-
-backend letsencrypt-backend
-    server letsencrypt 127.0.0.1:54321
+backend clickviral-backend
+        balance roundrobin
+        server 511078-web-01 35.175.63.50:80 check
+        server 511078-web-02 3.85.141.123:80 check
